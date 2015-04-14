@@ -21,9 +21,9 @@ Technically, there are four ways frameworks you can use to generate perform your
 
 | Data modeling framework   | Description                                                     | Status           |
 |---------------------------|-----------------------------------------------------------------|------------------|
-| [sql-runner] [sql-runner] | Aggregate your event-level data in your database directly, using SQL to express your aggregation logic, and [sql-runner] [sql-runner-app] to automatically run the aggregation process at the end of each data load.    | Production-ready |
-| hadoop                    | Aggregate your event-level data in EMR, as part of the batch-based pipeline. | To be developed |
-| spark-streaming           | Aggregate your event-level data using Spark streaming on Kinesis, as part of the real-time pipeline | To be developed |
+| [sql-runner] [sql-runner] | Express your aggregation logic in SQL, and apply this to the event-level data in your SQL-datawarehouseusing [sql-runner] [sql-runner-app]    | Production-ready |
+| hadoop                    | Express your aggregation logic in Scalding or Cascalog, and apply this to the event-level data as part of the EMR enrichment process | To be developed |
+| spark-streaming           | Express and run your aggregation logic using Spark streaming on Kinesis, as part of the real-time pipeline | To be developed |
 | [looker] [looker]         | Aggregate your event-level data in LookML                       | Production-ready |
 
 Note that the data models included are exemplar to get started: each Snowplow user will want to extend and customize the data models to incorporate their own business logic.
@@ -37,10 +37,8 @@ Note that the data models included are exemplar to get started: each Snowplow us
 
 [architecture-image]: https://d3i6fms1cm1j0i.cloudfront.net/github-wiki/images/snowplow-architecture-5-data-modeling.png
 [storage]: https://github.com/snowplow/snowplow/tree/master/4-storage
-[setup]: https://github.com/snowplow/snowplow/wiki/getting-started-analysing-SnowPlow-data
-[cookbook]: http://snowplowanalytics.com/analytics/event-dictionaries-and-data-models/data-modeling.html
-
-[looker]: http://looker.com/
+[setup]: https://github.com/snowplow/snowplow/wiki/getting-started-with-data-modeling
+[cookbook]: http://snowplowanalytics.com/analytics/event-dictionaries-and-data-models/collection-enrichment-modeling-analysis.html#data-modeling
 
 [e1]: ./looker-analytics/
 [e2]: ./postgres-analytics/
@@ -50,5 +48,6 @@ Note that the data models included are exemplar to get started: each Snowplow us
 [setup-image]: https://d3i6fms1cm1j0i.cloudfront.net/github/images/setup.png
 [roadmap-image]: https://d3i6fms1cm1j0i.cloudfront.net/github/images/roadmap.png
 
-[sql-runner]:
-[sql-runner-app]: 
+[sql-runner]: https://github.com/snowplow/snowplow/tree/master/5-data-modeling/sql-runner
+[sql-runner-app]: https://github.com/snowplow/sql-runner
+[looker]: https://github.com/snowplow/snowplow/tree/master/5-data-modeling/looker
